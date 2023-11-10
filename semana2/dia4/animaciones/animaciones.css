@@ -1,0 +1,66 @@
+ *{
+    margin: 0;
+    padding: 0;
+ }
+
+ body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+ }
+
+ .texto-animado{
+    animation-name: texto-volador;
+    animation-duration: 10s;
+    animation-iteration-count: 5;
+    border: solid;
+ }
+
+
+ /* @keyframes texto-volador{
+    from{
+        margin-left: 100%;
+       
+    }to{
+        margin-left: -100%;
+     
+    }
+ } */
+
+ /*  animacion 2 */
+ .image-animada{
+    animation-name: image-resize;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+ }
+
+ /* @keyframes image-resize{
+    from{
+        width: 20px;
+    
+    }to{
+        width:300px ; 
+    }
+ } */
+
+
+ .cuadrado{
+    width: 200px;
+    height: 200px;
+   background-color: red;
+   animation-name: cambio;
+   animation-duration: 2s;
+   animation-iteration-count: infinite;
+ }
+
+ @keyframes cambio{
+    0%{
+        background-color: blue;
+    }
+    25%{
+        background-color: violet;
+    }
+    50%{background-color: green;}
+    100%{
+        background-color: pink;
+    }
+ }
+ 
