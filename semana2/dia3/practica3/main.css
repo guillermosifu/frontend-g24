@@ -1,0 +1,101 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.wrap {
+  width: 80rem;
+  margin: auto;
+}
+/* encabezado */
+.header {
+  width: 100%;
+  background-color: #9ecefa;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+  padding: 0px 20px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 17px;
+}
+
+.header-content a {
+  text-decoration: none;
+  color: #707070;
+}
+.header-content .morado {
+  color: #87119a;
+  font-weight: bold;
+}
+
+.header-content ul {
+  display: flex;
+  list-style: none;
+  justify-content: space-around;
+}
+
+.header-content li {
+  margin-right: 20px;
+}
+
+/* section nosotros*/
+
+.nosotros {
+  margin-top: 40px;
+  padding: 0 20px;
+  margin-bottom: 40px;
+}
+
+span {
+  color: #87119a;
+  font-size: 18px;
+  font-weight: bold;
+  border-left: solid 7px;
+  padding: 10px;
+}
+
+p {
+  margin-top: 20px;
+  line-height: 17px;
+}
+
+.gallery {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-around;
+
+}
+
+.gallery img {
+  width: 380px;
+}
+/* section2 */
+
+.gallerys{
+  display: flex;
+  justify-content: space-around;
+  padding: 0 140px;
+  margin-bottom: 20px;
+  
+}
+
+.gallery2{
+  display: flex;
+  justify-content: center;
+}
+
+/* section3 */
+
+.gallery3{
+  margin-top: 40px;
+  display: flex;
+ justify-content: center;
+ 
+}
+.gallery3 img{
+  width:300px ;
+}
