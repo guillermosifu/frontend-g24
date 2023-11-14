@@ -1,0 +1,63 @@
+ *{
+    margin: 0;
+    padding: 0;
+
+ }
+
+ body{
+    box-sizing: border-box;
+    padding-bottom: 50px;
+ }
+
+ .ball1{
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    border-radius: 50%;
+    animation-name: pelota;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+ }
+
+ @keyframes pelota{      
+    from{
+       transform: translateY(0px);
+    }to{
+       transform: translateY(-100px);
+    }
+ }
+
+ /*  tesxto que se ecirbe solo */
+
+ .lineas{
+    text-align: center;
+    width: 300px;
+    margin: auto;
+    font-size: 24px;
+    white-space: nowrap;
+    border-right: 2px solid black;
+    transform: translateY(-50%);
+    overflow: hidden;
+ }
+ .texto-animado-dos {
+    
+    animation: texto-animado-dos 5s steps(144) 1s normal both,
+    cursor 0.5s steps(50) infinite normal ;
+    animation-iteration-count: infinite;
+ }
+
+@keyframes texto-animado-dos{
+    from{
+        width: 0px;
+    }to{
+        width: 780px;
+    }
+}
+
+@keyframes cursor{
+    from{
+        border-right-color: red;
+    }to{
+        border-right-color: transparent;
+    }
+}
