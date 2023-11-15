@@ -1,0 +1,81 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+.wrap {
+  width: 1200px;
+  margin: auto;
+  height: 100vh;
+}
+
+h1 {
+  font-size: 48px;
+}
+h2 {
+  font-size: 30px;
+  text-align: center;
+  font-weight: bold;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+p {
+  color: #fff;
+}
+.banner {
+  position: relative;
+  margin: 0;
+}
+.banner img {
+  width: 100%;
+}
+
+.banner .hijo {
+  position: absolute;
+  color: #fff;
+}
+
+.banner .hijo:nth-child(1) {
+  top: 60px;
+  left: 43%;
+  z-index: 1;
+}
+
+.banner .hijo:nth-child(3) {
+  top: 300px;
+  left: 7%;
+  padding: 20px;
+  width: 350px;
+  text-align: left;
+  border-radius: 10px;
+  background-color: rgba(114, 153, 254, 0.5);
+}
+
+/* section about me */
+
+.sobre-mi {
+  background: #7299fe;
+  padding: 40px;
+  color: #fff;
+  height: 400px;
+}
+
+.sobre-mi h2 {
+  color: #1d06a7;
+  margin-bottom: 30px;
+}
+
+.sobre-mi p {
+  line-height: 25px;
+  margin-bottom: 30px;
+}
+.sobre-mi button {
+  background: #d16fff;
+  padding: 15px;
+  width: 150px;
+  border: transparent;
+  border-radius: 10px;
+  color: #fff;
+}
