@@ -1,0 +1,42 @@
+ body{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+ }
+ /* .container{
+    display: flex;
+    justify-content: flex-end;
+ }
+
+ .item{
+    background-color: red;
+    color: #fff;
+    padding: 20px;
+    margin: 10px;
+ } */
+
+ /* ejercicio 3 */
+
+ .container2{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    width: 650px;
+    height: 100vh;
+ }
+
+
+ .item{
+    background-color: #3498db;
+    color: #fff;
+    padding: 20px;
+    margin: 10px;
+    width: 100px;
+    text-align: center;
+ }
+ .odd{
+    background-color: red;
+ }
+ .even{
+    background-color: blue;
+ }
