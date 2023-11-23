@@ -1,0 +1,76 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: blue;
+  text-align: center;
+  font-size: 40px;
+}
+
+.section-principal {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border: solid;
+  height: 100vh;
+}
+
+.section-principal div {
+  width: 300px;
+  height: 300px;
+  border: solid;
+}
+
+.box-one{
+    background-color: red;
+}
+
+.box-two{
+    background-color: violet;
+}
+
+.box-three{
+    background-color: green;
+}
+
+/* media query - colocar diferentes medidas  */
+
+@media screen and (max-width :900px) {
+    body{
+        background-color: black;
+        color: #fff;
+        font-size: 30px;
+    }
+    .section-principal{
+        display: flex;
+        flex-direction: column;
+    }
+    .section-principal div {
+        width: 200px;
+        height: 200px;
+        margin-bottom: 10px;
+      }
+}
+
+
+
+
+@media screen and (max-width :650px) {
+  
+    body{
+        background-color: #ccc;
+        font-size: 24px;
+        color: #fff;
+    }
+    .section-principal{
+        display: flex;
+        flex-direction: column;
+    }
+    .section-principal div {
+        width: 200px;
+        height: 200px;
+        margin-bottom: 10px;
+      }
+}
