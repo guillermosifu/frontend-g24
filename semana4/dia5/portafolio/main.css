@@ -224,12 +224,12 @@
 .portafolio .galeria{
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .portafolio .galeria .proyecto{
   position: relative;
-  max-width: 350px;
+  width: 400px;
   height: fit-content;
   margin: 50px;
   cursor: pointer;
@@ -262,6 +262,7 @@
 }
 .portafolio .galeria .proyecto .overlay:hover{
   opacity: 1;
+  box-shadow: rgb(214, 126, 3) 0px 20px 30px -10px;
 }
 
 .portafolio .galeria .proyecto .overlay:hover h3{
