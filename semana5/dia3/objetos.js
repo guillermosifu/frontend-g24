@@ -34,14 +34,18 @@ persona["profesion"] = "ingeniero";
 
 // como puedo modificar el value deun key??
 persona.edad = 25;
-persona.profesion="masajista"
+persona.profesion = "masajista";
 
 // se podra hacer un array de objetos ?
 
-const personas = [{nombre:"juan",edad:20,peso:90},{nombre:"sofia",edad:20,peso:90},{nombre:"diego",edad:30,peso:70}]
+const personas = [
+  { nombre: "juan", edad: 20, peso: 90 },
+  { nombre: "sofia", edad: 20, peso: 90 },
+  { nombre: "diego", edad: 30, peso: 70 },
+];
 
-console.log(personas)
+console.log(personas);
 
-console.log(personas[0].nombre)
-console.log(personas[1].peso)
-console.log(personas[2].edad,"anios")
+console.log(personas[0].nombre);
+console.log(personas[1].peso);
+console.log(personas[2].edad, "anios");
