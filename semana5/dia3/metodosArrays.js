@@ -18,31 +18,30 @@ console.log(fruits2);
 
 //shift(), elimina el primero elemeto de un array
 
-let fruits3=["fresa",'mandarina','melon']
+let fruits3 = ["fresa", "mandarina", "melon"];
 
 fruits3.shift();
-console.log(fruits3)
+console.log(fruits3);
 
 //unshift() aniade  uno o mas elemtnos al inicio del array
 
-let fruits4= ['toronja','kiwi','higo']
+let fruits4 = ["toronja", "kiwi", "higo"];
 
-fruits4.unshift('sandia','melocoton')
+fruits4.unshift("sandia", "melocoton");
 
-console.log(fruits4)
+console.log(fruits4);
 
 //splice()  cambia el contenido de un arrar , eliminando o reemplazando el elemento
 
-let fruits5= ['pera','durazno','granadilla']
+let fruits5 = ["pera", "durazno", "granadilla"];
+//indice de array // indiece de elementos
+fruits5.splice(0, 3, "kiwi", "guayaba");
+console.log(fruits5);
 
-fruits5.splice(1,2,'kiwi','guayaba')
-console.log(fruits5)
+// slice(): devuelve  una parte del aarray ,sin modificar del array original
 
-// slice(): devuelve  una parte del aarray ,sin modificar del array original 
+let fruits6 = ["pera", "mango ", "higo", "mora", "fresa"];
 
+let sliceFruits = fruits6.slice(2, 5);
 
-let fruits6=["pera",'mango ','higo','mora','fresa']
- 
-let sliceFruits = fruits6.slice(2,3)
-
-console.log(sliceFruits)
+console.log(sliceFruits);
