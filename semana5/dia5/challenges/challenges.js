@@ -124,23 +124,71 @@ function calcularAreaRadio(radio) {
 
 console.log(calcularAreaRadio(5));
 
-
 //esirbe una funcion que tome dos cadenas (string) como parametos y los concatene
 
-function concatenarTexto(texto1,texto2){
-    return texto1 + " " + texto2
+function concatenarTexto(texto1, texto2) {
+  return texto1 + " " + texto2;
 }
 
-console.log(concatenarTexto("hola","g24"))
+console.log(concatenarTexto("hola", "g24"));
 
-//escribe una funcion que calcule el factoril de un numero 
+//escribe una funcion que calcule el factoril de un numero
 
-function calcularFactorial (numero){
- if(numero === 0 || numero === 1){
-    return 1
- }else{
-    return numero * calcularFactorial(numero -1)
- }
+function calcularFactorial(numero) {
+  if (numero === 0 || numero === 1) {
+    return 1;
+  } else {
+    return numero * calcularFactorial(numero - 1);
+  }
 }
 
-console.log(calcularFactorial(5))
+console.log(calcularFactorial(5));
+
+//ejercicio 12  de algoritmos
+function calcularSalarioanual(salarioInicial, incrementoAnual, años) {
+  let salarioAcumulado = salarioInicial;
+
+  console.log(`anio 1 - salario : ${salarioInicial}`);
+
+  for (let año = 2; año <= años; año++) {
+    const salarioActual = salarioAcumulado * (1 + incrementoAnual);
+
+    salarioAcumulado = salarioActual;
+
+    console.log(`anio ${años} - salario : ${salarioActual}`);
+  }
+
+  console.log(`\salario acumulado deespues de ${años} años: ${salarioAcumulado}`);
+}
+
+calcularSalarioanual(1500,0.10,3)
+
+
+//  10 
+
+function personaMenorEdad(persona1, edad1, persona2, edad2, persona3, edad3) {
+    let personaMenor = "";
+    let edadMenor = Infinity; // Inicializar con un valor muy grande para asegurar que se reemplace
+
+    // Comparar edades y actualizar si se encuentra una edad menor
+    if (edad1 < edadMenor) {
+        personaMenor = persona1;
+        edadMenor = edad1;
+    }
+
+    if (edad2 < edadMenor) {
+        personaMenor = persona2;
+        edadMenor = edad2;
+    }
+
+    if (edad3 < edadMenor) {
+        personaMenor = persona3;
+        edadMenor = edad3;
+    }
+
+    // Imprimir resultados
+    console.log(`La persona de menor edad es ${personaMenor} con ${edadMenor} años.`);
+}
+
+// Llamar a la función con datos específicos
+personaMenorEdad("Persona1", 25, "Persona2", 30, "Persona3", 22);
