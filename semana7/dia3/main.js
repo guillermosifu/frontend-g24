@@ -25,7 +25,7 @@ const githubRepos = document.querySelector("#github-repos");
 const githubActionSearch = document.querySelector("#github-action-search");
 const githubInputSearch = document.querySelector("#github-search");
 
-// aca ejecutamos
+// aca ejecutamos la funcion con el eveto onclick
 githubActionSearch.onclick = () => {
   const username = githubInputSearch.value;
   githubInputSearch.value = "";
@@ -39,27 +39,37 @@ githubActionSearch.onclick = () => {
     return;
   }
 
-  obtenerDatosGithub(username)
+  obtenerDatosGithub(username);
 };
 
+// ejecutamos la funcion con el evento keyup{levantar tecla}
 githubInputSearch.addEventListener("keyup", function (event) {
   if (event.key === "Enter") {
- obtenerDatosGithub(event.target.value)
+    obtenerDatosGithub(event.target.value);
   }
 });
 
-const obtenerDatosGithub = async (username="guillermosifu") => {
+// funcion de peticion a API con fecth y async await
+const obtenerDatosGithub = async (username = "guillermosifu") => {
   const response = await fetch(`https://api.github.com/users/${username}`);
   const data = await response.json();
-  console.log(data)
+  console.log(data);
 
-  setDataUser(data)
+  setDataUser(data);
 };
 
-obtenerDatosGithub()
+const formatDate = (fecha) => {
+  let date = new Date(fecha);
+  return date.toISOString().split("T")[0];
+};
 
+// funcion paa insertar propiedades a cada elemento capturado en nuestro HTML
+const setDataUser = (data) => {
+  imageProfile.src = data.avatar_url;
+  githubName.textContent = data.login;
+  githubBio.innerHTML = data.bio;
+  githubUserName.innerHTML = `@${data.login}`;
+  githubJoined.innerHTML =formatDate(data.created_at) ;
+};
 
-const setDataUser =(data)=>{
-imageProfile.src= data.avatar_url;
-githubName.textContent= data.login
-}
+obtenerDatosGithub();
