@@ -48,10 +48,18 @@ githubInputSearch.addEventListener("keyup", function (event) {
   }
 });
 
-const obtenerDatosGithub = async (username) => {
+const obtenerDatosGithub = async (username="guillermosifu") => {
   const response = await fetch(`https://api.github.com/users/${username}`);
   const data = await response.json();
   console.log(data)
+
+  setDataUser(data)
 };
 
 obtenerDatosGithub()
+
+
+const setDataUser =(data)=>{
+imageProfile.src= data.avatar_url;
+githubName.textContent= data.login
+}
