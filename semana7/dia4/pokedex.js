@@ -3,6 +3,9 @@
 //PASO 1 CREAMOS LA FUNCION ASINCRONA
 
 const pokemonContainer = document.querySelector("#row-pokemons");
+// esto es del modal
+const pokemonName = document.querySelector("#pokemon-name");
+const pokemonImg = document.querySelector("#pokemon-img");
 
 const obtenerPokemones = async () => {
   const response = await fetch("https://pokeapi.co/api/v2/pokemon?limit=50");
@@ -30,12 +33,27 @@ const setPokemonsView = (results) => {
     <div class = 'card-body text-center'>
     <h6 class ='text-title'>N. ${index + 1}</h6>
     <h4 class ='text-title'>${result.name}</h4>
+    </div>
+    <button onclick='obtenerDetallePokemon("${
+      result.url
+    }")'  class="btn btn-warning" data-bs-toggle ='modal' data-bs-target="#modalPokemones">info pokemon</button>      
       </div>
       </div>
     `;
 
     pokemonContainer.innerHTML += html;
   });
+};
+
+// nueva funcion para el modal
+
+const obtenerDetallePokemon = async (url) => {
+  const response = await fetch(url);
+  const data = await response.json();
+  console.log("detalle", data);
+
+  pokemonName.innerHTML = data.name;
+  pokemonImg.src = data.sprites.other.home.front_default;
 };
 
 obtenerPokemones();
