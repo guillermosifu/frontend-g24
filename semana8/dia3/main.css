@@ -1,0 +1,13 @@
+body{
+    transition: .3s ease;
+}
+
+.darkMode{
+    color: #fff;
+    background-color: #000;
+    font-size: 40px;
+}
+
+.content {
+    padding: 20px;
+}
